@@ -1,42 +1,49 @@
+// Create a pet object
 const myPet = {
     name: "Itty Bitty",
-    species: "Kitten",
+    species: "kitten",
     happiness: 50,
 
+// Method: play
 play() {
-  this.happiness += 10;
+  this.happiness += 10; //Increases happiness by 10
   console.log(
     `You played with ${this.name}! Happiness is now ${this.happiness}.`
-  );
+  ); 
 },
 
+// Method: feed
 feed() {
-  this.happiness += 20;
+  this.happiness += 20; //Increases happiness by 20
   console.log(`You fed ${this.name}! Happiness is now ${this.happiness}.`);
-},
+}, 
 
+// Method: status
 status() {
   console.log(
     `${this.name} the ${this.species} has a happiness level of ${this.happiness}.`
-  );
+  ); 
 },
 
+// Bonus: rename
 rename(newName) {
   this.name = newName;
   return `Your kitten's new name is ${newName}!`;
-}
+} //Returns a message: "Your kitten's new name is Dude!"
 };
 
 console.log(myPet);
 
-console.log(`Happiness before playing: ${myPet.happiness}`);
-myPet.play();
-console.log(`Happiness after playing: ${myPet.happiness}`);
+// Play with pet
+console.log(`Happiness before playing: ${myPet.happiness}`); //Output: "Happiness before playing: 50"
+myPet.play(); //Output: "You played with Itty Bitty! Happiness is now 60."
+console.log(`Happiness after playing: ${myPet.happiness}`); //Output: "Happiness after playing: 60"
 
-console.log(`Happiness before feeding: ${myPet.happiness}`);
-myPet.feed();
-console.log(`Happiness after feeding: ${myPet.happiness}`);
+// Feed pet
+console.log(`Happiness before feeding: ${myPet.happiness}`); //Output: "Happiness before feeding: 60"
+myPet.feed(); //Output:"You fed Itty Bitty! Happiness is now 80."
+console.log(`Happiness after feeding: ${myPet.happiness}`); //Output: "Happiness after feeding: 80"
 
-myPet.status();
+myPet.status(); //Output: "Itty Bitty the kitten has a happiness level of 80.""
 
-console.log(myPet.rename("Dude"));
+console.log(myPet.rename("Dude")); //Output: "Your kitten's new name is Dude!"
