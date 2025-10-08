@@ -4,25 +4,21 @@ const myPet = {
     species: "kitten",
     happiness: 50,
 
-// Method: play
+// Play method
 play() {
   this.happiness += 10; //Increases happiness by 10
-  console.log(
-    `You played with ${this.name}! Happiness is now ${this.happiness}.`
-  ); 
+  return `You played with ${this.name}! Happiness is now ${this.happiness}.`; 
 },
 
-// Method: feed
+// Feed method
 feed() {
   this.happiness += 20; //Increases happiness by 20
-  console.log(`You fed ${this.name}! Happiness is now ${this.happiness}.`);
+  return `You fed ${this.name}! Happiness is now ${this.happiness}.`;
 }, 
 
-// Method: status
+// Status method
 status() {
-  console.log(
-    `${this.name} the ${this.species} has a happiness level of ${this.happiness}.`
-  ); 
+  console.log(`${this.name} the ${this.species} has a happiness level of ${this.happiness}.`); 
 },
 
 // Bonus: rename
